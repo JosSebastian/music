@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <p>main</p>
+    Component: Bar/Bottom
   </div>
 </template>
 

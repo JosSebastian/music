@@ -1,8 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
-    <p>main</p>
+  <div class="w-full p-1 rounded-lg bg-neutral-900 text-neutral-100">
+    <slot />
   </div>
 </template>
 

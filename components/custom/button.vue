@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
-    <p>main</p>
-  </div>
+  <button class="px-6 py-3 rounded-2xl">
+    <slot />
+  </button>
 </template>
 
 <style scoped></style>
