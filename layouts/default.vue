@@ -1,13 +1,20 @@
-<script lang="ts" setup></script>
+<script setup>
+const player = useState("player");
+</script>
 
 <template>
-  <div class="flex bg-black">
-    <BarSide />
-    <CustomContainer class="mx-0 my-2">
-      <BarTop />
-      <!-- <slot /> -->
-      <!-- <BarBottom /> -->
-    </CustomContainer>
+  <div>
+    <div class="flex bg-black">
+      <BarSide />
+      <CustomContainer
+        v-bind:class="player.show ? 'h-[calc(100vh-96px)]' : ''"
+        class="mx-0 my-2"
+      >
+        <BarTop />
+        <slot />
+        <MusicPlayer />
+      </CustomContainer>
+    </div>
   </div>
 </template>
 

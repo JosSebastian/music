@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const router = useRouter();
+const user = useSupabaseUser();
 </script>
 
 <template>
@@ -33,13 +34,13 @@ const router = useRouter();
           <icon name="ic:outline-search" size="30" />
         </CustomNavigation>
       </div>
-      <div class="flex gap-2">
-        <CustomButton class="hover:scale-[1.125] transition">
-          <p>Sign Up</p>
-        </CustomButton>
-        <CustomButton class="bg-white hover:scale-[1.125] transition">
-          <p class="text-black">Sign In</p>
-        </CustomButton>
+      <div v-if="!user" class="flex justify-center items-center gap-2">
+        <AuthenticationSignUp />
+        <AuthenticationSignIn />
+      </div>
+      <div v-else class="flex justify-center items-center gap-2">
+        <AuthenticationSignOut />
+        <AuthenticationAccount />
       </div>
     </div>
   </div>

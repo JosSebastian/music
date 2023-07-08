@@ -2,8 +2,7 @@
 
 <template>
   <button
-    class="p-1 flex justify-center items-center rounded-full bg-black transition"
-  >
+    class="p-1 flex justify-center items-center rounded-full bg-black transition">
     <slot />
   </button>
 </template>

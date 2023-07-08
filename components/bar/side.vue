@@ -28,7 +28,7 @@ const navigation = computed(() => {
 
 <template>
   <div class="h-screen flex">
-    <div class="w-80 h-full p-2 hidden md:flex flex-col gap-2 bg-black">
+    <div class="w-[350px] h-full p-2 hidden md:flex flex-col gap-2 bg-black">
       <CustomContainer class="flex-grow-0">
         <div class="p-1 flex flex-col gap-4">
           <CustomItem
@@ -40,7 +40,7 @@ const navigation = computed(() => {
           />
         </div>
       </CustomContainer>
-      <CustomContainer class="flex-grow-[1]">
+      <CustomContainer>
         <MusicLibrary />
       </CustomContainer>
     </div>
